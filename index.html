@@ -1,19 +1,370 @@
 <head> 
   <link rel=¨stylesheet¨ type=¨text/css¨ href=¨style.css¨ />
-  <style>
-    img {width: auto;
-        height: 55%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    h1 {text-align: center;
-    }
-    h2 {text-align: center;
-    }
-    body {width: 100%;}
-    
-  </style>
+<style type="text/css">
+@font-face {
+  font-family: publicsansThin;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Thin.ttf);
+}
+@font-face {
+  font-family: publicsansLight;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Light.ttf);
+}
+@font-face {
+  font-family: publicsansBold;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: merriweather;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/merriweather/Latin-Merriweather-Light.ttf);
+}
+@font-face {
+  font-family: publicsansRegular;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Regular.ttf);
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "publicsansR", sans-serif;
+  color: #89DA59;
+  font-size: 62.5%;
+  background-color: #80BD9E;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+header {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header .overlay h1 {
+  display: block;
+  position: relative;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  z-index: 8;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 7rem;
+  color: #FF420E;
+  mix-blend-mode: screen;
+  opacity: .98;
+}
+@media (max-width: 768px) {
+  header .overlay h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-height: 500px) {
+  header .overlay h1 {
+    font-size: 2rem;
+  }
+}
+header .overlay h1 span {
+  display: block;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  color: #808D9E;
+  transform: translate(0%, 15%);
+  opacity: .97;
+}
+@media (max-width: 768px) {
+  header .overlay h1 span {
+    font-size: 1.25rem;
+  }
+}
+header .parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+header .parallax div {
+  position: absolute;
+  bottom: -13px;
+  left: -13px;
+  width: calc(100% + (13px * 2));
+  height: calc(100% + (13px * 2));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 9000ms ease;
+}
+@media (max-height: 600px) {
+  header .parallax div {
+    background-size: 100%;
+  }
+}
+header .parallax .one {
+  background-image: url("https://tornis.robbowen.digital/img/mist.png");
+  z-index: 2;
+  animation: side 47s quadratic infinite;
+}
+header .parallax .two {
+  background-image: url("https://tornis.robbowen.digital/img/tree_top.png");
+  z-index: 3;
+}
+header .parallax .three {
+  background-image: url("https://tornis.robbowen.digital/img/mist.png");
+  z-index: 4;
+  animation: side 30s linear 12s infinite;
+}
+header .parallax .four {
+  background-image: url("https://tornis.robbowen.digital/img/tree_mid.png");
+  z-index: 2;
+}
+header .parallax .five {
+  background-image: url("https://tornis.robbowen.digital/img/tree_base.jpg");
+  z-index: 2;
+}
+
+@keyframes side {
+  20%, 60%, 100% {
+    transform: translateX(13px);
+  }
+  40%, 80% {
+    transform: translateX(-13px);
+  }
+}
+.youtube-container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  font-size: calc(.5rem + .6vw);
+  font-family: "publicsansRegular";
+  line-height: calc(.5rem + .6vw);
+  color: #000000;
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-top: 20px;
+  opacity: 1;
+}
+
+.youtube-player {
+  width: 100%;
+  /* assuming that the video has a 16:9 ratio */
+  padding-bottom: 56.25%;
+  padding-top: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: hand;
+  cursor: pointer;
+  opacity: 1;
+}
+
+img.youtube-thumb {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: -9.25% auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: auto;
+}
+
+div.play-button {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("https://i.imgur.com/TxzC70f.png") no-repeat;
+}
+
+#youtube-iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+main {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 2em 4em;
+  min-height: 95vh;
+  background-color: #5a9b79;
+  font-family: "publicsansLight";
+  z-index: 1;
+}
+main footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  display: flex;
+  min-height: 15 vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  color: #f43500;
+  background-color: #6fb491;
+}
+main .buffer {
+  background-color: #80BD9E;
+  min-height: 12px;
+  padding-bottom: 0px;
+  z-index: 3;
+  opacity: .52;
+}
+main .bufferSmall {
+  background-color: #80BD9E;
+  min-height: 4px;
+  padding-bottom: 0px;
+  z-index: 3;
+}
+main .buffer2 {
+  background-color: #F98866;
+  min-height: 12px;
+  padding-bottom: 0px;
+  z-index: 3;
+}
+main h2 {
+  font-family: publicsansLight;
+  text-align: center;
+  padding-top: 8px;
+}
+main h3 {
+  font-family: publicsansThin;
+  text-align: center;
+  padding-top: 8px;
+  color: #808D9E;
+}
+main .arrow-up {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #F98866;
+}
+main .arrow-up:hover {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FF420E;
+}
+main .linkSpanner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+main .collapsable {
+  font-family: publicsansLight;
+  text-align: center;
+  padding-top: 8px;
+}
+main a {
+  color: #2929f8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+main a:hover {
+  color: #FF420E;
+  font-style: none;
+  opacity: .92;
+}
+main a:active {
+  color: #00b8d4;
+}
+main .index {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  font-family: publicsansBold;
+  font-size: calc(.35rem + .6vh);
+  background-color: #5a9b79;
+  color: #89DA59;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+  opacity: .95;
+}
+main .container {
+  position: relative;
+  z-index: 2;
+  font-size: calc(.4rem + 1vh);
+  background-color: #ffffff;
+  color: #000000;
+  padding-bottom: 4px;
+  padding-top: 2.5px;
+  padding-left: 12px;
+  opacity: .85;
+}
+main .container2 {
+  position: relative;
+  z-index: 2;
+  font-size: calc(.4rem + 1vh);
+  background-color: #ffffff;
+  color: #000000;
+  padding-bottom: 4px;
+  padding-top: 0px;
+  padding-left: 12px;
+  opacity: .85;
+}
+main .container3 {
+  text-align: center;
+  margin: 10px  auto;
+  width: 100%;
+  max-width: 800px;
+  font-size: calc(.5rem + .6vw);
+  font-family: "publicsansRegular";
+  line-height: calc(.5rem + .6vw);
+  color: #000000;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  opacity: 1;
+}
+
+a {
+  padding-bottom: .25em;
+  text-decoration: none;
+  border-bottom: 1px dashed #4242f9;
+  color: #7373fb;
+}
+</style>
   <script src="script.js"></script>
   <div class="overlay">
     <div class="parallax">
