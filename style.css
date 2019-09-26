@@ -5,6 +5,7 @@ blue tanks at bottom
 use grass in base bar, set avg to $petal
 
 */
+<style type="text/css">
 @font-face {
   font-family: publicsansThin;
   src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Thin.ttf);
@@ -368,3 +369,4 @@ a {
   border-bottom: 1px dashed #4242f9;
   color: #7373fb;
 }
+</style>
