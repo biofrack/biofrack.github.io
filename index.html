@@ -1,517 +1,118 @@
-<head> 
-
-  <div class="overlay">
-    <div class="parallax">
-      <h1><div id="index">Biofrack <span> </h1>
-        <h2>- Fracking Tech Reapplied - </div></span></h2>
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
-      <div class="four"></div>
-      <div class="five"></div>
-    </div>
-  </div>
-</head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-$(window).scroll(function () {
-  const
-  a = $(this).scrollTop(),
-  b = 400,
-  t = window.pageYOffset;
-
-  $(".parallax").css('transform', 'translate(-' + a / 1.6 + 'px, -' + 1 - a / b + 'px)');
-
-  $(".one").css('bottom', -(t * 0.3) + 'px');
-  $(".two").css('bottom', -(t * 0.4) + 'px');
-  $(".three").css('bottom', -(t * 0.5) + 'px');
-  $(".four").css('bottom', -(t * 0.6) + 'px');
-  $(".five").css('bottom', -(t * 0.7) + 'px');
-});
-
-$("header").on('mousemove', e => {
-  const cx = $(window).width() / 2,
-  cy = $(window).height() / 2,
-  x = (cx - e.pageX) / cx * 2,
-  y = (cy - e.pageY) / cy * 2;
-  $(".two").css('transform', `translate(${x}px, ${y}px)`);
-  $(".four").css('transform', `translate(-${x}px, ${y}px)`);
-  $(".five").css('transform', `translate(${x}px, -${y}px)`);
-});
-
-(function () {
-  var v = document.getElementsByClassName("youtube-player");
-  for (var n = 0; n < v.length; n++) {if (window.CP.shouldStopExecution(0)) break;
-    var p = document.createElement("div");
-    p.innerHTML = labnolThumb(v[n].dataset.id);
-    p.onclick = labnolIframe;
-    v[n].appendChild(p);
-  }window.CP.exitedLoop(0);
-})();
-
-function labnolThumb(id) {
-  return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
-}
-
-function labnolIframe() {
-  var iframe = document.createElement("iframe");
-  iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=0&showinfo=0");
-  iframe.setAttribute("frameborder", "0");
-  iframe.setAttribute("id", "youtube-iframe");
-  this.parentNode.replaceChild(iframe, this);
-}
-  </script>
-<style type="text/css">
-  }
-@font-face {
-  font-family: publicsansThin;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Thin.ttf);
-}
-@font-face {
-  font-family: publicsansLight;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Light.ttf);
-}
-@font-face {
-  font-family: publicsansBold;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-SemiBold.ttf);
-}
-@font-face {
-  font-family: merriweather;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/merriweather/Latin-Merriweather-Light.ttf);
-}
-@font-face {
-  font-family: publicsansRegular;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Regular.ttf);
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "publicsansR", sans-serif;
-  color:  #FF420E;
-  font-size: 62.5%;
-  background-color: #80BD9E;
-  text-align: justify;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-}
-
-header {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-}
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-header .overlay h1 {
-  display: block;
-  position: relative;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, 15%);
-  z-index: 8;
-  margin: 0;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 7rem;
-  color: #FF420E;
-  mix-blend-mode: screen;
-  opacity: .98;
-}
-@media (max-width: 768px) {
-  header .overlay h1 {
-    font-size: 3rem;
-  }
-}
-@media (max-height: 500px) {
-  header .overlay h1 {
-    font-size: 2rem;
-  }
-}
-header .overlay h1 span {
-  display: block;
-  letter-spacing: 3px;
-  font-size: 1.5rem;
-  color: #808D9E;
-  transform: translate(0%, 15%);
-  opacity: .97;
-}
-@media (max-width: 768px) {
-  header .overlay h1 span {
-    font-size: 1.25rem;
-  }
-}
-header .parallax {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-header .parallax div {
-  position: absolute;
-  bottom: -13px;
-  left: -13px;
-  width: calc(100% + (13px * 2));
-  height: calc(100% + (13px * 2));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: transform 9000ms ease;
-}
-@media (max-height: 600px) {
-  header .parallax div {
-    background-size: 100%;
-  }
-}
-header .parallax .one {
-  background-image: url("https://tornis.robbowen.digital/img/mist.png");
-  z-index: 2;
-  animation: side 47s quadratic infinite;
-}
-header .parallax .two {
-  background-image: url("https://tornis.robbowen.digital/img/tree_top.png");
-  z-index: 3;
-}
-header .parallax .three {
-  background-image: url("https://tornis.robbowen.digital/img/mist.png");
-  z-index: 4;
-  animation: side 30s linear 12s infinite;
-}
-header .parallax .four {
-  background-image: url("https://tornis.robbowen.digital/img/tree_mid.png");
-  z-index: 2;
-}
-header .parallax .five {
-  background-image: url("https://tornis.robbowen.digital/img/tree_base.jpg");
-  z-index: 2;
-}
-
-@keyframes side {
-  20%, 60%, 100% {
-    transform: translateX(13px);
-  }
-  40%, 80% {
-    transform: translateX(-13px);
-  }
-}
-.youtube-container {
-  margin: 20px auto;
-  width: 100%;
-  max-width: 800px;
-  font-size: calc(.5rem + .6vw);
-  font-family: "publicsansRegular";
-  line-height: calc(.5rem + .6vw);
-  color: #000000;
-  background-color: #ffffff;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 8px;
-  padding-top: 20px;
-  opacity: 1;
-}
-
-.youtube-player {
-  width: 100%;
-  /* assuming that the video has a 16:9 ratio */
-  padding-bottom: 56.25%;
-  padding-top: 20px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  cursor: hand;
-  cursor: pointer;
-  opacity: 1;
-}
-
-img.youtube-thumb {
-  bottom: 0;
-  display: block;
-  left: 0;
-  margin: -9.25% auto;
-  max-width: 100%;
-  width: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: auto;
-}
-
-div.play-button {
-  height: 72px;
-  width: 72px;
-  left: 50%;
-  top: 50%;
-  margin-left: -36px;
-  margin-top: -36px;
-  position: absolute;
-  background: url("https://i.imgur.com/TxzC70f.png") no-repeat;
-}
-
-#youtube-iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
-}
-
-main {
-  position: relative;
-  margin-bottom: 12px;
-  padding: 2em 4em;
-  min-height: 95vh;
-  background-color: #5a9b79;
-  font-family: "publicsansLight";
-  z-index: 1;
-}
-main footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -2;
-  display: flex;
-  min-height: 15 vh;
-  justify-content: center;
-  align-items: center;
-  font-size: 6rem;
-  color: #f43500;
-  background-color: #6fb491;
-}
-main .buffer {
-  background-color: #80BD9E;
-  min-height: 12px;
-  padding-bottom: 0px;
-  z-index: 3;
-  opacity: .52;
-}
-main .bufferSmall {
-  background-color: #80BD9E;
-  min-height: 4px;
-  padding-bottom: 0px;
-  z-index: 3;
-}
-main .buffer2 {
-  background-color: #F98866;
-  min-height: 12px;
-  padding-bottom: 0px;
-  z-index: 3;
-}
-main h2 {
-  font-family: publicsansLight;
-  text-align: center;
-  padding-top: 8px;
-}
-main h3 {
-  font-family: publicsansThin;
-  text-align: center;
-  padding-top: 8px;
-  color: #808D9E;
-}
-main .arrow-up {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #F98866;
-}
-main .arrow-up:hover {
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #FF420E;
-}
-main .linkSpanner {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-main .collapsable {
-  font-family: publicsansLight;
-  text-align: center;
-  padding-top: 8px;
-}
-main a {
-  color: #2929f8;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-main a:hover {
-  color: #FF420E;
-  font-style: none;
-  opacity: .92;
-}
-main a:active {
-  color: #00b8d4;
-}
-main .index {
-  text-align: center;
-  position: relative;
-  z-index: 3;
-  font-family: publicsansBold;
-  font-size: calc(.35rem + .6vh);
-  background-color: #5a9b79;
-  color: #fcc200;
-  padding-bottom: .5rem;
-  padding-top: .5rem;
-  opacity: .95;
-}
-main .container {
-  position: relative;
-  z-index: 2;
-  font-size: calc(.4rem + 1vh);
-  background-color: #ffffff;
-  color: #000000;
-  padding-bottom: 4px;
-  padding-top: 2.5px;
-  padding-left: 12px;
-  opacity: .85;
-}
-main .container2 {
-  position: relative;
-  z-index: 2;
-  font-size: calc(.4rem + 1vh);
-  background-color: #ffffff;
-  color: #000000;
-  padding-bottom: 4px;
-  padding-top: 0px;
-  padding-left: 12px;
-  opacity: .85;
-}
-main .container3 {
-  text-align: center;
-  margin: 10px  auto;
-  width: 100%;
-  max-width: 800px;
-  font-size: calc(.5rem + .6vw);
-  font-family: "publicsansRegular";
-  line-height: calc(.5rem + .6vw);
-  color: #000000;
-  background-color: #ffffff;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 4px;
-  padding-top: 4px;
-  opacity: 1;
-}
-
-a {
-  padding-bottom: .25em;
-  text-decoration: none;
-  border-bottom: 1px dashed #4242f9;
-  color: #7373fb;
-}
-</style>
-  <script src="script.js"></script>
+<header>
+    <div class="overlay">
+        <div class="parallax">
+            <h1>
+                <div id="index">Biofrack<span>Fracking Tech Reapplied</div></span></h1>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+            </div>
+        </div>
+</header>
 <main>
-  <footer>
-    <p>  </p>
-    <p>  </p>
+    <footer>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+    </footer>
+    <div class="index">
+        <h1><a href="#system">About</a> | <a href="#process">Process</a> | <a href="#test">Results</a> | <a href="#contact">Contact</a></div>
     <p> </p>
     <p> </p>
-  </footer><div class="index">
-  <h1><a href = "#system">About</a>  |  <a href = "#process">Process</a>  |  <a href = "#test">Results</a>  |  <a href = "#contact">Contact</a></div>
     <p> </p>
-    <p> </p>
-    <p> </p>
-  </h1>
-  <div class="container"><div id="process">
-    <h1>Biofrack Injection Process </h1></div>
-    <div class="buffer"></div>
-  </div>
-  <div class="youtube-container">
-    <p> <center><iframe width="560" height="315" src="https://www.youtube.com/embed/GRw9qHzy_tc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </center>
-      <p><div class="buffer"><p></div>
-    A pilot hole is drilled into the soil before driving an injection rod 3 feet into the subsoil. Then the top of the rod is connected to the pressurized accumulator full of the mixture of biochar and water. Finally a valve is turned which allows the mixture to flow into the soil, fracturing the substrate as it moves towards the surface, depositing biochar into the fractures along the way.    </p>
-     </div>
-  <div class="container"><div id = "system">
-    <h1>System Applications</h1></div>
-    <div class="buffer"></div>
-  </div>
-  <div class="youtube-container">
-    <h3>Overview</h3>
-    <p><img src="OverallDesignSnipv1.PNG" width="90%" height="auto" left-margin="auto" right-margin="auto" display="block"/></p>
-    <p>
-We have reinvented the shovel. Compacted soils which previously required removal and replacement can be restructured for improved infiltration rates or increased root depth using Biofrack's proprietary slurry injection system. By fracturing the soil, compaction can be reduced at a depth of 3 to 4 feet. This shifts the distribution of pore sizes present in the structure of the soil quickly and cheaply, requiring only one gallon of substrate to treat 100 gallons of volume of soil by creating fractures and filling them with a high flow, highly adsorbent substrate: biochar. The fractures create a preferential flow path for stormwater, and the biochar deposited within the fracture network acts as a filter. Biochar is a granular form of activated carbon - not dissimilar from what you would find in a water pitcher filter. Biochar’s adsorption properties allow it to remove contaminants from water at a high rate. It has beneficial mechanical properties too, including a high compressive strength to hold the fractures open and a high porosity to allow a high flow rate. To achieve additional filtration, the flow rate can be reduced by adding different particle sizes to the biochar mix.    </p>
-    <p><img src="System setup.png" left-margin="auto" right-margin="auto" display="block" width="90%" height="auto" /></p>
-    <h2>Civil</h2>
-    <div class="buffer"></div>
-    <h3>Stormwater Control Measure Enhancement and Remediation</h3>
-    <p>The ability of a surface to remove runoff through infiltration is expressed as a C coeffient in hydrological engineering when modeling sites to create erosion control plans. Although these surfaces were previously limited to traditional ground covers, new research has been done that will allow these engineers to assign C coeffients to new erosion control measures like rain gardens based on testing and performance of the specific rain garden design being implemented in similar soil types. </p>
-    <p>Rain gardens are expensive and can fail easily. Once engineers begin implementing these perminant erosion control mesures, a compaction layer inevitably will form at the base of the garden. Eventually this will be prevented by the roots of the vegitation holding open the flow paths available, however during the first years of initial establishment there is a risk that rooting depth could be limited by a compaction layer forming. To remedy this currently the soil below the rain garden must be removed and replaced with sand and gravel. This requires replanting the entire garden. However, biofrack can achieve the same results in 30 minutes with two laborers.</p>
-    <h2>Environmental</h2>
-    <div class="buffer"></div>
-    <h3>Bioretention and Carbon Sequestration</h3>
-    <p>Areas that require additional contaminant removal from runoff could benefit from biofracking.</p>
-    <p>When applied to the surface, the maximum depth of carbon integration into soil over time is only 20 cm. By increasing the depth, this device increases the maximum density of carbon sequestration in soil through biochar application possible in soil by increasing the depth of application.</p>
-    <h2>Agriculture</h2>
-    <div class="buffer"></div>
-    <h3>Carbon and Fertilizer Amendment</h3>
-    <p>Break up hard pans at depth without tilling or ripping the soil.</p>
-    <p>Deep irrigation - apply subsurface water at any time of day with no risk of evaporation or uptake by weeds.</p>
-    <p>Control infiltration rate by customizing the mix of biochar amendment injected.</p>
-    <p>Biochar is proving to be a useful soil amendment [ref papers], however surface application rates need to be high to have signifigant effects. By injecting biochar at root level, volatilization of N can be reduced. The fractures create a preferential flow path, allowing the biochar to reabsorb surface applied fertalizer before it leaves the root zone.</p>
-    <h2>Residential </h2>
-    <div class="buffer"></div>
-    <h3>Flash Flooding Reduction</h3>
-    <P>Environmental Stewardship Program - reduce runoff at its source to lower municipal wastewater volume. </P>
-    <P>Alleveate other drainage issues: prevent flooding, reduce pressure on retaining walls, and slow erosion problems due to flow concentration.</P><div class="arrow-up">
-<a href="#index">
-</a>
-</div>
-  </div>
-  <div class="container"><div id="test">
-    <h1>Results</h1></div></div>
-    <div class="buffer"></div>
-  </div>
-  <div class="youtube-container">
-  <p><img src="bargraph.png" width="90%" height="auto" left-margin="auto" right-margin="auto" display="block" /></p>
-  <p>Initial infiltration rates were tested on untreated plots and plots with a bore hole created by driving in the injection probe without fracturing. These initial rates were compared to infiltration rates tested after fracturing. The borehole showed small increases in the average infiltration rate, but there were signifigant differences between the untreated plots and the fractured plots. 
-  
-    <p><img display="block" margin-left="auto" margin-right="auto" height="50%" src="candlestickci.png" /></p>
-    
-    <h3>Awards</h3>
-    <p>This project has won some academic awards in its prototype form; placing first in the G.B Gunlogson Student Environmental Design Open Competition at the American Society of Agricultural and Biological Engineers and placing second in EUReCA at UT Knoxville. More details about these awards and the design team can be found at <a href="https://ag.tennessee.edu/news/Pages/NR-2019-08-GunlogsonWin.aspx">UTIA</a>'s website.</p>
-
+    </h1>
+    <div class="container">
+        <div id="process">
+            <h1>Biofrack Injection Process </h1>
+        </div>
+        <div class="buffer"></div>
     </div>
-  <div class="container"><div id="contact">
-    <h1>Contact </h1>
-    <div class="buffer2">
-      <div class="container3">
-        <h3>1-833-FRACKIT <a ref="biofrack@protonmail.ch">info@biofrack.com</a>          </h3>
-        <p>Interested in using Biofrack? Send us a message.</p>
-        <p><form method="POST" action="https://formspree.io/info@biofrack.com"></p>
-        <p><input type="email" name="email" placeholder="Email"></p></input>  <input type="name" name="message" placeholder="Name"></input>
-        <p><textarea name="message" placeholder=" Message  "></textarea></p>
-        <p><button type="submit">Send</button></p></form>
-      </div>
-    </div></div>
-  </div>
+    <div class="youtube-container">
+        <div class="youtube-player" data-id="lomyJY1MoiQ"></div>
+        <p>System description</p>
+    </div>
+    <div class="container">
+        <div id="system">
+            <h1>System Applications</h1>
+        </div>
+        <div class="buffer"></div>
+    </div>
+    <div class="youtube-container">
+        <h3>Overview</h3>
+        <p>We have reinvented the shovel. Grounds which would previously require the removal and replacement of soil can be restructured for improved infiltration rates or increased root depth using biofrack's proprietary soil injection system. By fracturing
+            the soil, compaction can be reduced at a depth of 3 to 4 feet. This shifts the distribution of pore sizes present in the structure of the soil quickly and cheaply, only requiring one gallon of substrate to treat 100 of gallons of volume of
+            soil by createing fractures and filling them with a high flow, highly absorbant substrate - biochar. The fractures create a preferential flow path forcing the runoff to flow through the biochar, which acts as a filtrate. Biochar is a form
+            of granularly activated carbon like you would find in a water pitcher filter and has similar absorbtion properties that allow it to remove contaminants from water at a high rate. It has beneficial mechanical properties too, including a high
+            compressive strength to hold open the fractures and a high porosity to allow a high flow rater. This flow rate can be reduced for additional filtration by adding different particle sizes to the biochar mix.</p>
+        <p><img src="images/systemdiagram.PNG" class="inline" /></p>
+        <h2>Civil</h2>
+        <div class="buffer"></div>
+        <h3>Stormwater Control Measure Enhancement and Remediation</h3>
+        <p>The ability of a surface to remove runoff through infiltration is expressed as a C coeffient in hydrological engineering when modeling sites to create erosion control plans. Although these surfaces were previously limited to traditional ground
+            covers, new research has been done that will allow these engineers to assign C coeffients to new erosion control measures like rain gardens based on testing and performance of the specific rain garden design being implemented in similar soil
+            types. </p>
+        <p>Rain gardens are expensive and can fail easily. Once engineers begin implementing these perminant erosion control mesures, a compaction layer inevitably will form at the base of the garden. Eventually this will be prevented by the roots of the
+            vegitation holding open the flow paths available, however during the first years of initial establishment there is a risk that rooting depth could be limited by a compaction layer forming. To remedy this currently the soil below the rain garden
+            must be removed and replaced with sand and gravel. This requires replanting the entire garden. However, biofrack can achieve the same results in 30 minutes with two laborers.</p>
+        <h2>Environmental</h2>
+        <div class="buffer"></div>
+        <h3>Bioretention and Carbon Sequestration</h3>
+        <p>Areas that require additional contaminant removal from runoff could benefit from biofracking.</p>
+        <p>When applied to the surface, the maximum depth of carbon integration into soil over time is only 20 cm. By increasing the depth, this device increases the maximum density of carbon sequestration in soil through biochar application possible in
+            soil by increasing the depth of application.</p>
+        <h2>Agriculture</h2>
+        <div class="buffer"></div>
+        <h3>Carbon and Fertilizer Amendment</h3>
+        <p>Break up hard pans at depth without tilling or ripping the soil.</p>
+        <p>Deep irrigation - apply subsurface water at any time of day with no risk of evaporation or uptake by weeds.</p>
+        <p>Control infiltration rate by customizing the mix of biochar amendment injected.</p>
+        <p>Biochar is proving to be a useful soil amendment [ref papers], however surface application rates need to be high to have signifigant effects. By injecting biochar at root level, volatilization of N can be reduced. The fractures create a preferential
+            flow path, allowing the biochar to reabsorb surface applied fertalizer before it leaves the root zone.</p>
+        <h2>Residential </h2>
+        <div class="buffer"></div>
+        <h3>Flash Flooding Reduction</h3>
+        <P>Environmental Stewardship Program - reduce runoff at its source to lower municipal wastewater volume. </P>
+        <P>Alleveate other drainage issues: prevent flooding, reduce pressure on retaining walls, and slow erosion problems due to flow concentration.</P>
+        <div class="arrow-up">
+            <a href="#index">
+</a>
+        </div>
+    </div>
+    <div class="container">
+        <div id="test">
+            <h1>Results</h1>
+        </div>
+        <div class="buffer"></div>
+    </div>
+    <div class="youtube-container">
+        <h3>Testing</h3>
+        <div class="youtube-player" data-id="kuS1ITSzosg"></div>
+        <div class="container2"></div>
+        <p>insert graphs/ discuss testing</p>
+        <h3>Awards</h3>
+        <p>This project has won some academic awards in its prototype form; placing first in the G.B Gunlogson Student Environmental Design Open Competition at the American Society of Agricultural and Biological Engineers and placing second in EUReCA at
+            UT Knoxville. More details about these awards and the design team can be found at <a href="https://ag.tennessee.edu/news/Pages/NR-2019-08-GunlogsonWin.aspx">UTIA</a>'s website.</p>
+    </div>
+    <div class="container">
+        <div id="contact">
+            <h1>Contact </h1>
+            <div class="buffer2">
+                <div class="container3">
+                    <h3>1-833-FRACKIT <a ref="biofrack@protonmail.ch">biofrack@protonmail.com</a> </h3>
+                    <p>Interested in using Biofrack? Send us a message.</p>
+                    <p>
+                        <form method="POST" action="https://formspree.io/biofrack@protonmail.com">
+                    </p>
+                    <p><input type="email" name="email" placeholder="Email"></p>
+                    </input> <input type="name" name="message" placeholder="Name"></input>
+                    <p><textarea name="message" placeholder=" Message  "></textarea></p>
+                    <p><button type="submit">Send</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
