@@ -1,22 +1,22 @@
 /* notes leon sans -dynamic wt font subheading 2nd parallax blue tanks at bottom use grass in base bar, set avg to $petal */
  @font-face {
 	 font-family: publicsansThin;
-	 src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Thin.ttf);
+	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/public-sans/PublicSans-Thin.ttf);
 }
  @font-face {
 	 font-family: publicsansLight;
-	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/PublicSans-Regular.ttf);
+	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/PublicSans-Light.ttf);
 }
  @font-face {
 	 font-family: publicsansBold;
-	 src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-SemiBold.ttf);
-}
- @font-face {
-	 font-family: merriweather;
-	 src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/merriweather/Latin-Merriweather-Light.ttf);
+	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/PublicSans-SemiBold.ttf);
 }
  @font-face {
 	 font-family: publicsansRegular;
+	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/PublicSans-Regular.ttf);
+}
+@font-face {
+	 font-family: josefinSlab;
 	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/JosefinSlab-SemiBold.ttf);
 }
  *, *:before, *:after {
