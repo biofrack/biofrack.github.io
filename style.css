@@ -17,7 +17,7 @@
 }
  @font-face {
 	 font-family: publicsansRegular;
-	 src: url(https://cdnjs.cloudflare.com/ajax/libs/uswds/2.0.2/fonts/public-sans/PublicSans-Regular.ttf);
+	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/JosefinSlab-SemiBold.ttf);
 }
  *, *:before, *:after {
 	 box-sizing: border-box;
