@@ -238,6 +238,7 @@
 	 min-height: 12px;
 	 padding-bottom: 0px;
 	 z-index: 3;
+	 opacity: 0.75
 }
  main h2 {
 	 font-family: publicsansLight;
