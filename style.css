@@ -138,6 +138,7 @@
 	}
 }
  .youtube-container {
+	 letter-spacing: 0.2em;
 	 margin: 20px auto;
 	 width: 100%;
 	 max-width: 800px;
