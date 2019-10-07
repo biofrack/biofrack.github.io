@@ -138,23 +138,22 @@
 	}
 }
  .youtube-container {
-	 line-height: 120%;
-	 letter-spacing: 0.065em;
-	 text-align: justify;
-	 margin: 20px auto;
-	 width: 100%;
-	 max-width: 800px;
-	 font-size: calc(.5rem + .6vw);
-	 font-family: "publicsansRegular";
-	 line-height: calc(.5rem + .6vw);
-	 color: #000;
-	 background-color: #fff;
-	 padding-left: 20px;
-	 padding-right: 20px;
-	 padding-bottom: 8px;
-	 padding-top: 20px;
-	 opacity: 1;
-}
+			letter-spacing: 0.04em;
+			text-align: justify;
+			margin: 20px auto;
+			width: 100%;
+			max-width: 800px;
+			font-size: calc(.6rem + .6vw);
+			font-family: "publicsansRegular";
+			line-height: calc(1rem + .6vw);
+			color: #000;
+			background-color: #fff;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 8px;
+			padding-top: 20px;
+			opacity: 1;
+							}
  .youtube-player {
 	 width: 100%;
 	/* assuming that the video has a 16:9 ratio */
