@@ -145,7 +145,7 @@
 			max-width: 1000px;
 			font-size: calc(1rem + .6vw);
 			font-family: "publicsansRegular";
-			line-height: calc(1rem + .6vw);
+			line-height: calc(1rem + 1vw);
 			color: #000;
 			background-color: #fff;
 			padding-left: 20px;
