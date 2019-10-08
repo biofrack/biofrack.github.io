@@ -4,7 +4,7 @@
 	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/public-sans/PublicSans-Thin.ttf);
 }
  @font-face {
-	 font-family: publicsansLight;
+	 font-famzily: publicsansLight;
 	 src: url(https://github.com/biofrack/biofrack.github.io/raw/master/PublicSans-Light.ttf);
 }
 @font-face {
@@ -293,7 +293,7 @@
 	 letter-spacing: -1px;
 }
  main a:hover {
-	 color: #edb84e;
+	 color: #ff420e;
 	 font-style: none;
 	 opacity: 0.92;
 }
