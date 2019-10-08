@@ -107,7 +107,6 @@
 }
  @media (max-height: 600px) {
 	 header .parallax div {
-		 background-size: 100%;
 	}
 }
  header .parallax .one {
@@ -158,9 +157,9 @@
 			margin: 20px auto;
 			width: 100%;
 			max-width: 1000px;
-			font-size: calc(1rem + .3vw);
+			font-size: calc(.5rem + .8vw);
 			font-family: "publicsansRegular";
-			line-height: calc(1rem + 1vw);
+			line-height: calc(.8rem + 8vw);
 			color: #000;
 			background-color: #fff;
 			padding-left: 20px;
@@ -364,8 +363,6 @@
 	 opacity: 1;
 }
  a {
-	 padding-bottom: 0.005em;
-	 text-decoration: none;
 	 border-bottom: 1px dashed #7373fb;
 	 color: #303030;
 }
