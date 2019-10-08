@@ -317,7 +317,7 @@
 	 text-align: center;
 	 position: relative;
 	 z-index: 3;
-	 font-size: calc(.35rem + .6vh);
+	 font-size: calc(.35rem + .6vw);
 	 background-color: #5a9b79;
 	 color: #89da59;
 	 padding-bottom: 0.5rem;
