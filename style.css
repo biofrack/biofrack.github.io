@@ -110,25 +110,25 @@
 	}
 }
  header .parallax .one {
-	 background-image: url("https://tornis.robbowen.digital/img/mist.png");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/mist.png");
 	 z-index: 2;
 	 animation: side 47s quadratic infinite;
 }
  header .parallax .two {
-	 background-image: url("https://tornis.robbowen.digital/img/tree_top.png");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_top.png");
 	 z-index: 3;
 }
  header .parallax .three {
-	 background-image: url("https://tornis.robbowen.digital/img/mist.png");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/mist.png");
 	 z-index: 4;
 	 animation: side 30s linear 12s infinite;
 }
  header .parallax .four {
-	 background-image: url("https://tornis.robbowen.digital/img/tree_mid.png");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_mid.png");
 	 z-index: 2;
 }
  header .parallax .five {
-	 background-image: url("https://tornis.robbowen.digital/img/tree_base.jpg");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_base.jpg");
 	 z-index: 2;
 }
  @keyframes side {
