@@ -287,18 +287,18 @@
 	 padding-top: 8px;
 }
  main a {
-	 color: #2929f8;
+	 color: #2522f11;
 	 text-decoration: none;
 	 text-transform: uppercase;
 	 letter-spacing: -1px;
 }
  main a:hover {
-	 color: #ff420e;
+	 color: #edb84e;
 	 font-style: none;
 	 opacity: 0.92;
 }
  main a:active {
-	 color: #00b8d4;
+	 color: #f0c46c;
 }
  main .index {
 	 text-align: center;
