@@ -290,6 +290,7 @@
 	 color: #2929f8;
 	 text-decoration: none;
 	 text-transform: uppercase;
+	 letter-spacing: -1px;
 }
  main a:hover {
 	 color: #ff420e;
