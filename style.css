@@ -157,7 +157,7 @@
 			margin: 20px auto;
 			width: 100%;
 			max-width: 1000px;
-			font-size: calc(.7rem + .8px + .2vw);
+			font-size: calc(.7rem + .1px + .8vw);
 			font-family: "publicsansRegular";
 			line-height: calc(.8rem + .8vw);
 			color: #1a1a1a;
