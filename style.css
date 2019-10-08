@@ -152,12 +152,12 @@
 			  left: 0; top: 0;
 			}
  .youtube-container {
-			letter-spacing: 0.04em;
+			letter-spacing: calc(0.04em - 1px);
 			text-align: justify;
 			margin: 20px auto;
 			width: 100%;
 			max-width: 1000px;
-			font-size: calc(.5rem + .8vw);
+			font-size: calc(.5rem + 1px + .4vw);
 			font-family: "publicsansRegular";
 			line-height: calc(.8rem + .8vw);
 			color: #000;
