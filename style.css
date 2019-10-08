@@ -115,7 +115,7 @@
 	 animation: side 47s quadratic infinite;
 }
  header .parallax .two {
-	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_top.png");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_top.webp");
 	 z-index: 3;
 }
  header .parallax .three {
@@ -124,11 +124,11 @@
 	 animation: side 30s linear 12s infinite;
 }
  header .parallax .four {
-	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_mid.png");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_mid(1).webp");
 	 z-index: 2;
 }
  header .parallax .five {
-	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_base.jpg");
+	 background-image: url("https://github.com/biofrack/biofrack.github.io/blob/master/tree_base.webp");
 	 z-index: 2;
 }
  @keyframes side {
