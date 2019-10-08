@@ -295,7 +295,7 @@
  main a:hover {
 	 color: #ff420e;
 	 font-style: none;
-	 opacity: 0.92;
+	 opacity: 0.75;
 }
  main a:active {
 	 color: #f0c46c;
