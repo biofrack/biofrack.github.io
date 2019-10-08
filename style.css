@@ -160,8 +160,8 @@
 			font-size: calc(.7rem + .8px + .2vw);
 			font-family: "publicsansRegular";
 			line-height: calc(.8rem + .8vw);
-			color: #000;
-			background-color: #fff;
+			color: #1a1a1a;
+			background-color: #f9f9f9;
 			padding-left: 20px;
 			padding-right: 20px;
 			padding-bottom: 8px;
