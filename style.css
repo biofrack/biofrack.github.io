@@ -206,6 +206,7 @@
 	 left: 0;
 	 opacity: 1;
 }
+
  main {
 	 position: relative;
 	 margin-bottom: 12px;
@@ -213,6 +214,18 @@
 	 min-height: 95vh;
 	 background-color: #5a9b79;
 	 z-index: 1;
+}
+ main .index {
+	 text-align: center;
+	 position: relative;
+	 z-index: 3;
+	 font-size: calc(.35rem + .6vh);
+	 background-color: #5a9b79;
+	 color: #89da59;
+	 padding-bottom: 0.5rem;
+	 padding-top: 0.5rem;
+	 opacity: 0.95;
+	 letter-spacing:-2.7px;
 }
  main footer {
 	 position: fixed;
@@ -306,18 +319,7 @@
  main a:active {
 	 color: #f0c46c;
 }
- main .index {
-	 text-align: center;
-	 position: relative;
-	 z-index: 3;
-	 font-size: calc(.35rem + .6vh);
-	 background-color: #5a9b79;
-	 color: #89da59;
-	 padding-bottom: 0.5rem;
-	 padding-top: 0.5rem;
-	 opacity: 0.95;
-	 letter-spacing:-2.7px;
-}
+
  main .container {
 	 position: relative;
 	 z-index: 2;
